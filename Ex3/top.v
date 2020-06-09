@@ -31,10 +31,10 @@ module counter(
     reg [7:0] counter_out
 
     //Todo: add user logic
-	always @(posedge clk) 
+	always @(posedge clk); 
 	if (rst == 0 )
 		if (enable == 1)
-		assign counter_out= (direction ==1) ? counter_out +1:
+		counter_out <= (direction ==1) ? counter_out +1:
 		counter_out -1;
 		else counter_out = counter_out;
 	else
